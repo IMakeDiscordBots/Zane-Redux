@@ -49,6 +49,4 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-//left off at deleting commands.
-
 client.login(token);
