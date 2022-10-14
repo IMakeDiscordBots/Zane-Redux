@@ -7,5 +7,4 @@ module.exports = {
     async execute(interaction) {
         await interaction.reply(`🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`)
     },
-    //andrew was here (swag)
 }
