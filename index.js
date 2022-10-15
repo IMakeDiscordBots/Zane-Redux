@@ -14,7 +14,11 @@ for (const file of commandFiles) {
     const command = require(filePath);
     client.commands.set(command.data.name, command);
 }
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 015ca2f4e788d904d188c0e8dfc5a01393f0caf7
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
@@ -28,7 +32,11 @@ for (const file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args));
     }
 }
+<<<<<<< HEAD
 */
+=======
+
+>>>>>>> 015ca2f4e788d904d188c0e8dfc5a01393f0caf7
 client.once('ready', () => {
     console.log('Client online.');
 });
