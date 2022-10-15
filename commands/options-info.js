@@ -5,11 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('options')
         .setDescription('Info about provided options.')
-<<<<<<< HEAD
         .addStringOption(option => option.setName('input').setDescription('The input to send back')),
-=======
-        .addStringOption(option => option.setName('input').setDescription('The input to send back.')),
->>>>>>> 015ca2f4e788d904d188c0e8dfc5a01393f0caf7
     async execute(interaction) {
         const value = interaction.options.getString('input');
         if (value) return interaction.reply(`The options value is: \`${value}\``);
