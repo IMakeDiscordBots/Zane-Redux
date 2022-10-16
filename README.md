@@ -7,5 +7,6 @@ Anything crossed out has been completed, and the fixed code has been merged with
 
 <ul>
   <li><s>Run node deploy-command.js to register new commands.</s></li>
-  <li>Change image generation code in cat.js from `https://cataas.com/c` to: `https://cataas.com/c?${Date.now()}`</li>
+  <li><s>Change image generation code in cat.js from `https://cataas.com/c` to: `https://cataas.com/c?${Date.now()}`</s></li>
+  <li>Find faster method for cat image generation</li>
 </ul>
