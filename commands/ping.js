@@ -6,6 +6,7 @@ module.exports = {
         .setDescription('Replies with current ping.'),
     async execute(interaction) {
         const sent = await interaction.reply({ content: 'Pinging...', fetchReply: true });
+        /*
         const pingEmbed = new EmbedBuilder()
             .setTitle("Pong!")
             .setDescription("Uptime, Websocket Heartbeat, and Roundtrip Latency.")
@@ -17,7 +18,8 @@ module.exports = {
                 { name: 'Roundtrip Latency :round_pushpin:', value: `${sent.createdTimestamp - interaction.createdTimestamp}ms`},
             )
             .setFooter(`:ping_pong`);
-        //await interaction.editReply(`:ping_pong: Pong!\n:stopwatch: Uptime: ${Math.round(interaction.client.uptime / 60000)} minutes\n:sparkling_heart: Websocket heartbeat: ${interaction.client.ws.ping}ms.\n:round_pushpin: Roundtrip Latency: ${sent.createdTimestamp - interaction.createdTimestamp}ms`)
-        await interaction.editReply({ embeds: [pingEmbed] });
+        */
+        await interaction.editReply(`:ping_pong: Pong!\n:stopwatch: Uptime: ${Math.round(interaction.client.uptime / 60000)} minutes\n:sparkling_heart: Websocket heartbeat: ${interaction.client.ws.ping}ms.\n:round_pushpin: Roundtrip Latency: ${sent.createdTimestamp - interaction.createdTimestamp}ms`)
+        //await interaction.editReply({ embeds: [pingEmbed] });
     },
 }
