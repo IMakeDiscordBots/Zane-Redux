@@ -10,5 +10,6 @@ Anything with ** next to it is still a WIP.
   <li><s>Run node deploy-command.js to register new commands.</s></li>
   <li><s>Change image generation code in cat.js from `https://cataas.com/c` to: `https://cataas.com/c?${Date.now()}`</s></li>
   <li>Find faster method for cat image generation**</li>
-  <li>Finish embed for ping command</li>
+  <li><s>Finish embed for ping command</s></li>
+  <li>Fix embed for ping command</li>
 </ul>
