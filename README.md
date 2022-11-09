@@ -12,4 +12,5 @@ Anything with ** next to it is still a WIP.
   <li>Find faster method for cat image generation**</li>
   <li><s>Finish embed for ping command</s></li>
   <li>Fix embed for ping command</li>
+  <li>Finish and fix docker for bot hosting</li>
 </ul>
