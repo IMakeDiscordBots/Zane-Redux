@@ -9,9 +9,25 @@ module.exports = {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
         const catResult = await request('https://aws.random.cat/meow');
         const { file } = await catResult.body.json();
+        
+        /* Does not work correctly
+        const catImgEmbed = {
+            color: 0x0099ff,
+            title: 'Cat!',
+            image: {
+                url: "attachment://cat.png"
+            },
+            files: [{
+                attachment: file, name: 'cat.png',
+                name: 'cat.png'
+            }],
+        };
+        */
+        //Also does not work correctly
+        //interaction.reply({ files: [{ attachment: file, name: 'cat.png' }] });
         const catImgEmbed = new EmbedBuilder()
             .setColor(`#${randomColor}`)
-            .setImage({ files: [{ attachment: file, name: 'cat.png' }] })
+            .setImage(`https://cataas.com/c?${Date.now()}`)
             .setFooter({ text: 'Images courtesy of https://cataas.com/', iconURL: 'https://cdn-icons-png.flaticon.com/512/616/616430.png' })
         return interaction.reply({ embeds: [catImgEmbed] });
     },
