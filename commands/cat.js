@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, discordSort } = require('discord.js');
+const { AttachmentBuilder, SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { request } = require('undici');
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
         const catResult = await request('https://aws.random.cat/meow');
         const { file } = await catResult.body.json();
-        const imgUrl = new discordSort.MessageAttachment(file, 'cat.png');
+        const attachment = new AttachmentBuilder(file, 'cat.png');
         
         /*
         const catImgEmbed = new EmbedBuilder()
@@ -21,7 +21,7 @@ module.exports = {
         //Can't test because aws.random.cat/meow keeps returning 503 error :agony:
         const catImgEmbed = new EmbedBuilder()
             .setColor(`#${randomColor}`)
-            .setImage('attachment://ticket.png')
+            .setImage('')
             .setFooter({ text: 'Images courtesy of https://cataas.com/', iconURL: 'https://cdn-icons-png.flaticon.com/512/616/616430.png' })
         return interaction.reply({ embeds: [catImgEmbed] });
     },
